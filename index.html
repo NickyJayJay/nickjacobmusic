@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nick Jacob — Singer, Songwriter &amp; Musician</title>
+  <meta name="description" content="Nick Jacob is a singer, songwriter and musician based in Southern California. Americana-tinged classic rock. Available for licensing — one-stop, master + publishing controlled." />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nick Jacob — Singer, Songwriter &amp; Musician" />
+  <meta property="og:description" content="Southern California singer-songwriter. Classic-rock heart, pop sensibility. Available for sync licensing — one-stop, master + publishing controlled." />
+  <meta property="og:url" content="https://nickjacobmusic.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="canonical" href="https://nickjacobmusic.com/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <!-- Display serif for headings; body uses the system sans stack (no extra request). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --parchment: #f6f1e7;
+      --parchment-2: #efe7d7;
+      --card: #fbf8f1;
+      --ink: #241d17;
+      --muted: #6f6153;
+      --line: #e2d8c6;
+      --denim: #2f4a5e;      /* "Old Blue" */
+      --denim-deep: #223949;
+      --rust: #c25a2b;       /* warm classic-rock accent */
+      --rust-deep: #a4491f;
+      --max: 940px;
+
+      --serif: "Fraunces", Georgia, "Times New Roman", serif;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--parchment);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--denim); text-underline-offset: 3px; }
+    a:hover { color: var(--rust-deep); }
+
+    img, iframe { max-width: 100%; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.12; letter-spacing: -0.01em; margin: 0; }
+
+    .eyebrow {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--rust-deep);
+    }
+
+    /* ---------- Header / hero ---------- */
+    header.hero {
+      position: relative;
+      background:
+        radial-gradient(120% 90% at 85% -10%, rgba(47,74,94,0.10), transparent 60%),
+        linear-gradient(180deg, var(--parchment) 0%, var(--parchment-2) 100%);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .hero-inner { padding: 84px 0 72px; }
+    .hero h1 {
+      font-size: clamp(2.6rem, 7vw, 4.6rem);
+      font-weight: 600;
+      margin: 14px 0 0;
+    }
+    .hero .sub {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+      color: var(--denim);
+      margin: 14px 0 0;
+    }
+    .hero .loc {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin-top: 34px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .nav a { text-decoration: none; color: var(--ink); border-bottom: 2px solid transparent; padding-bottom: 2px; }
+    .nav a:hover { color: var(--rust-deep); border-color: var(--rust); }
+
+    /* ---------- Licensing banner ---------- */
+    .licensing {
+      background: var(--denim);
+      color: #f4efe6;
+    }
+    .licensing .wrap { padding-top: 30px; padding-bottom: 30px; }
+    .licensing .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px 32px;
+    }
+    .licensing .eyebrow { color: #f0b489; }
+    .licensing h2 {
+      color: #fbf8f1;
+      font-size: clamp(1.25rem, 2.6vw, 1.7rem);
+      margin-top: 6px;
+      max-width: 34ch;
+    }
+    .licensing p.detail { margin: 8px 0 0; color: #cdd8df; font-size: 0.98rem; }
+    .btn {
+      display: inline-block;
+      background: var(--rust);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 13px 22px;
+      border-radius: 8px;
+      white-space: nowrap;
+      box-shadow: 0 2px 0 var(--rust-deep);
+      transition: transform 0.08s ease;
+    }
+    .btn:hover { color: #fff; transform: translateY(-1px); }
+    .btn:active { transform: translateY(1px); box-shadow: none; }
+
+    /* ---------- Sections ---------- */
+    section { padding: 72px 0; }
+    section + section { border-top: 1px solid var(--line); }
+    .section-head { margin-bottom: 30px; }
+    .section-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); margin-top: 8px; }
+
+    /* Listen */
+    .player-frame {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      box-shadow: 0 12px 30px -18px rgba(34,57,73,0.35);
+    }
+    .player-frame iframe { display: block; border-radius: 8px; }
+    .player-credit {
+      font-size: 11px;
+      color: var(--muted);
+      line-break: anywhere;
+      word-break: normal;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding: 8px 6px 2px;
+    }
+    .player-credit a { color: var(--muted); text-decoration: none; }
+    .player-credit a:hover { color: var(--rust-deep); }
+
+    /* Streaming */
+    .streams {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+    .stream-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      transition: border-color 0.12s ease, transform 0.08s ease, box-shadow 0.12s ease;
+    }
+    .stream-card:hover {
+      color: var(--ink);
+      border-color: var(--denim);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 26px -18px rgba(34,57,73,0.5);
+    }
+    .stream-card svg { flex: 0 0 28px; width: 28px; height: 28px; }
+    .stream-card .label small { display: block; font-weight: 500; color: var(--muted); font-size: 0.78rem; }
+
+    /* Bio */
+    .bio { max-width: 62ch; }
+    .bio p { font-size: 1.08rem; margin: 0 0 1.1em; }
+    .bio p:first-of-type::first-letter {
+      font-family: var(--serif);
+      font-size: 3.4em;
+      line-height: 0.8;
+      float: left;
+      padding: 6px 10px 0 0;
+      color: var(--rust);
+    }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact .email {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      color: var(--denim);
+      text-decoration: none;
+      border-bottom: 2px solid var(--rust);
+      padding-bottom: 3px;
+    }
+    .contact .email:hover { color: var(--rust-deep); }
+    .contact p { color: var(--muted); margin-top: 18px; }
+    .socials { margin-top: 26px; display: flex; gap: 18px; justify-content: center; }
+    .socials a { font-weight: 600; text-decoration: none; }
+
+    /* Footer */
+    footer {
+      background: var(--denim-deep);
+      color: #b9c6cf;
+      text-align: center;
+      padding: 34px 24px;
+      font-size: 0.86rem;
+    }
+    footer a { color: #e7dccb; }
+
+    @media (max-width: 640px) {
+      .hero-inner { padding: 64px 0 52px; }
+      section { padding: 56px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Southern California singer-songwriter</p>
+      <h1>Nick Jacob</h1>
+      <p class="sub">Classic-rock heart. Pop sensibility. Songs built to last.</p>
+      <p class="loc">Guitar, bass &amp; harmonica — with an old Fender Strat he calls&nbsp;"Old&nbsp;Blue."</p>
+      <nav class="nav" aria-label="Section navigation">
+        <a href="#listen">Listen</a>
+        <a href="#streaming">Streaming</a>
+        <a href="#licensing">Licensing</a>
+        <a href="#bio">Bio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ LICENSING BANNER ============ -->
+  <div class="licensing" id="licensing">
+    <div class="wrap">
+      <div class="row">
+        <div>
+          <p class="eyebrow">For music supervisors</p>
+          <h2>Available for licensing — one-stop, master&nbsp;+&nbsp;publishing controlled.</h2>
+          <p class="detail">Clean rights, fast clearance. Direct to the artist — no third-party gatekeepers.</p>
+        </div>
+        <a class="btn" href="mailto:njacob341@gmail.com?subject=Sync%20licensing%20inquiry%20%E2%80%94%20Nick%20Jacob">Request a license</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ LISTEN ============ -->
+  <section id="listen">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The album</p>
+        <h2>Midnight Ride</h2>
+      </div>
+      <div class="player-frame">
+        <!-- SoundCloud accent themed to the site's rust accent: color=%23c25a2b -->
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" title="Midnight Ride by Nick Jacob on SoundCloud" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A503200485&color=%23c25a2b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <div class="player-credit">
+          <a href="https://soundcloud.com/nick-jacob-music" title="Nick Jacob" target="_blank" rel="noopener">Nick Jacob</a> ·
+          <a href="https://soundcloud.com/nick-jacob-music/sets/midnight-ride" title="Midnight Ride" target="_blank" rel="noopener">Midnight Ride</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STREAMING ============ -->
+  <section id="streaming">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Stream &amp; buy</p>
+        <h2>Wherever you listen</h2>
+      </div>
+      <div class="streams">
+        <a class="stream-card" href="https://open.spotify.com/artist/4dCnYqyOW9PqcRtZoroX4B" target="_blank" rel="noopener" aria-label="Listen on Spotify">
+          <svg viewBox="0 0 24 24" fill="#1DB954" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm5.5 17.3a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.35.22.46.68.25 1.03Zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.99-8.15-2.56-11.97-1.4a.94.94 0 1 1-.54-1.8c4.37-1.32 9.79-.68 13.49 1.6.44.27.58.85.31 1.29Zm.13-3.4C15.8 8.42 9.9 8.2 6.4 9.27a1.12 1.12 0 1 1-.65-2.15c4.02-1.22 10.54-.98 14.7 1.49a1.12 1.12 0 1 1-1.15 1.93Z"/></svg>
+          <span class="label">Spotify<small>Stream the album</small></span>
+        </a>
+        <a class="stream-card" href="https://music.apple.com/us/artist/nick-jacob/1043662230" target="_blank" rel="noopener" aria-label="Listen on Apple Music">
+          <svg viewBox="0 0 24 24" fill="#FA243C" aria-hidden="true"><path d="M23.1 6.5c0-.6 0-1.2-.1-1.8a4.1 4.1 0 0 0-.5-1.5A3.5 3.5 0 0 0 20.8.7a4.2 4.2 0 0 0-1.5-.5c-.6-.1-1.2-.1-1.8-.1H6.5c-.6 0-1.2 0-1.8.1a4.1 4.1 0 0 0-1.5.5A3.5 3.5 0 0 0 .7 3.2a4.2 4.2 0 0 0-.5 1.5c-.1.6-.1 1.2-.1 1.8v11c0 .6 0 1.2.1 1.8.1.5.2 1 .5 1.5a3.5 3.5 0 0 0 2.5 1.9c.6.1 1.2.1 1.8.1h11c.6 0 1.2 0 1.8-.1a4.2 4.2 0 0 0 1.5-.5 3.5 3.5 0 0 0 1.9-2.5c.1-.6.1-1.2.1-1.8v-11ZM17 5.8v8.4c0 .5 0 .9-.2 1.3a2 2 0 0 1-1.3 1c-.3.1-.6.1-.9.1-1.1 0-1.9-.8-1.9-1.9 0-.9.6-1.6 1.6-1.8l1.1-.2c.2 0 .3-.2.3-.4V8.3c0-.2-.1-.3-.3-.2l-4.8 1c-.2 0-.3.2-.3.4v6.8c0 .5 0 .9-.2 1.3a2 2 0 0 1-1.3 1c-.3.1-.6.1-.9.1-1.1 0-1.9-.8-1.9-1.9 0-.9.6-1.6 1.6-1.8l1.1-.2c.2 0 .3-.2.3-.4V6.9c0-.4.2-.6.6-.7l5.9-1.2c.4-.1.6.1.6.5l.1.3Z"/></svg>
+          <span class="label">Apple Music<small>Stream the album</small></span>
+        </a>
+        <a class="stream-card" href="https://music.amazon.com/artists/B015U2P2F0/nick-jacob" target="_blank" rel="noopener" aria-label="Listen on Amazon Music">
+          <svg viewBox="0 0 24 24" fill="#25D1DA" aria-hidden="true"><path d="M2 6.2C2 4.4 3.4 3 5.2 3h13.6C20.6 3 22 4.4 22 6.2v7.2c0 1.8-1.4 3.2-3.2 3.2H10l-4.2 3.3c-.5.4-1.2 0-1.2-.6v-2.7H5.2C3.4 16.6 2 15.2 2 13.4V6.2Zm5.4 1.9c-.9 0-1.6.7-1.6 1.9s.7 1.9 1.6 1.9c.5 0 .9-.2 1.1-.6v.5h1V6.3h-1v2.4c-.2-.4-.6-.6-1.1-.6Zm.2 3c-.5 0-.8-.4-.8-1.1 0-.7.3-1.1.8-1.1s.8.4.8 1.1c0 .7-.3 1.1-.8 1.1Zm4.6-3c-1 0-1.7.7-1.7 1.9s.7 1.9 1.7 1.9 1.7-.7 1.7-1.9-.7-1.9-1.7-1.9Zm0 3c-.5 0-.8-.4-.8-1.1 0-.7.3-1.1.8-1.1s.8.4.8 1.1c0 .7-.3 1.1-.8 1.1Zm3-2.9v3.7h1v-2c0-.5.3-.8.7-.8.4 0 .6.3.6.8v2h1v-2c0-.5.2-.8.7-.8.4 0 .6.3.6.8v2h1v-2.2c0-.9-.5-1.4-1.3-1.4-.5 0-1 .3-1.2.7-.2-.5-.6-.7-1.1-.7-.5 0-.9.2-1.1.6v-.5h-.9Z"/></svg>
+          <span class="label">Amazon Music<small>Stream &amp; buy</small></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BIO ============ -->
+  <section id="bio">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">About</p>
+        <h2>The story</h2>
+      </div>
+      <div class="bio">
+        <p>Nick Jacob is a singer, songwriter and musician based in Southern California. His primary instrument is a Fender Stratocaster he calls &ldquo;Old Blue&rdquo;, but he also plays bass guitar and harmonica on some of his recorded tracks.</p>
+        <p>Nick&rsquo;s songwriting style contains a strong pop sensibility that employs catchy melodies and memorable hooks. He considers himself to be a &ldquo;1970s classic rock guy at heart&rdquo;, but his music draws inspiration from multiple decades including the 1950s and covers various genres from rock to folk.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="wrap contact">
+      <p class="eyebrow">Get in touch</p>
+      <h2 style="margin:8px 0 26px;">Licensing, sync &amp; bookings</h2>
+      <a class="email" href="mailto:njacob341@gmail.com">njacob341@gmail.com</a>
+      <p>One-stop licensing — master &amp; publishing controlled by the artist.</p>
+      <div class="socials">
+        <a href="https://soundcloud.com/nick-jacob-music" target="_blank" rel="noopener">SoundCloud &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p>&copy; <span id="year">2026</span> Nick Jacob. All rights reserved. &middot; Southern California</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
