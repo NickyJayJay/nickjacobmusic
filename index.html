@@ -107,15 +107,12 @@
     header.hero {
       position: relative;
       color: #f4efe6;
-      background:
-        linear-gradient(90deg, rgba(16, 24, 30, 0.88) 0%, rgba(16, 24, 30, 0.6) 48%, rgba(16, 24, 30, 0.28) 100%),
-        linear-gradient(180deg, rgba(16, 24, 30, 0.15) 0%, rgba(16, 24, 30, 0.6) 100%),
-        url("/img/hero.jpg") center 35% / cover no-repeat #10181e;
+      background: url("file:///Users/nicholasjacob/Repos/nickjacobmusic/img/hero.jpg") center 35% / cover no-repeat #10181e;
       overflow: hidden;
     }
 
     .hero-inner {
-      padding: 108px 0 84px;
+      padding: 108px 24px 84px 24px;
     }
 
     .hero .eyebrow {
@@ -123,7 +120,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.6rem, 7vw, 4.6rem);
+      font-size: clamp(2.6rem, 7vw, 9rem);
       font-weight: 600;
       margin: 14px 0 0;
       color: #fbf8f1;
@@ -168,8 +165,8 @@
 
     /* ---------- Licensing banner ---------- */
     .licensing {
-      background: var(--denim);
-      color: #f4efe6;
+      background: var(--parchment);
+      color: var(--ink);
     }
 
     .licensing .wrap {
@@ -186,11 +183,11 @@
     }
 
     .licensing .eyebrow {
-      color: #f0b489;
+      color: var(--rust-deep);
     }
 
     .licensing h2 {
-      color: #fbf8f1;
+      color: var(--ink);
       font-size: clamp(1.25rem, 2.6vw, 1.7rem);
       margin-top: 6px;
       max-width: 34ch;
@@ -198,7 +195,7 @@
 
     .licensing p.detail {
       margin: 8px 0 0;
-      color: #cdd8df;
+      color: var(--muted);
       font-size: 0.98rem;
     }
 
@@ -244,6 +241,15 @@
     }
 
     /* Listen */
+    #listen {
+      background: url("file:///Users/nicholasjacob/Repos/nickjacobmusic/img/album.jpg") center 35% / cover no-repeat #10181e;
+    }
+
+    #listen h2,
+    #listen p {
+      color: #fff;
+    }
+
     .player-frame {
       background: var(--card);
       border: 1px solid var(--line);
@@ -278,6 +284,19 @@
     }
 
     /* Streaming */
+    #streaming {
+      background: var(--denim);
+      color: #f4efe6;
+    }
+
+    #streaming .eyebrow {
+      color: #f0b489;
+    }
+
+    #streaming .section-head h2 {
+      color: #fbf8f1;
+    }
+
     .streams {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -319,7 +338,14 @@
     }
 
     /* Bio */
+    .bio-layout {
+      display: flex;
+      gap: 44px;
+      align-items: flex-start;
+    }
+
     .bio {
+      flex: 1 1 auto;
       max-width: 62ch;
     }
 
@@ -335,6 +361,29 @@
       float: left;
       padding: 6px 10px 0 0;
       color: var(--rust);
+    }
+
+    .bio-photo {
+      flex: 0 0 300px;
+      width: 300px;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 34px -20px rgba(34, 57, 73, 0.5);
+    }
+
+    @media (max-width: 720px) {
+      .bio-layout {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .bio-photo {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 340px;
+      }
     }
 
     /* Contact */
@@ -497,13 +546,17 @@
         <p class="eyebrow">About</p>
         <h2>The story</h2>
       </div>
-      <div class="bio">
-        <p>Nick Jacob is a singer, songwriter and musician based in Southern California. His primary instrument is a
-          Fender Stratocaster he calls &ldquo;Old Blue&rdquo;, but he also plays bass guitar and harmonica on some of
-          his recorded tracks.</p>
-        <p>Nick&rsquo;s songwriting style contains a strong pop sensibility that employs catchy melodies and memorable
-          hooks. He considers himself to be a &ldquo;1970s classic rock guy at heart&rdquo;, but his music draws
-          inspiration from multiple decades including the 1950s and covers various genres from rock to folk.</p>
+      <div class="bio-layout">
+        <div class="bio">
+          <p>Nick Jacob is a singer, songwriter and musician based in Southern California. His primary instrument is a
+            Fender Stratocaster he calls &ldquo;Old Blue&rdquo;, but he also plays bass guitar and harmonica on some of
+            his recorded tracks.</p>
+          <p>Nick&rsquo;s songwriting style contains a strong pop sensibility that employs catchy melodies and memorable
+            hooks. He considers himself to be a &ldquo;1970s classic rock guy at heart&rdquo;, but his music draws
+            inspiration from multiple decades including the 1950s and covers various genres from rock to folk.</p>
+        </div>
+        <img class="bio-photo" src="file:///Users/nicholasjacob/Repos/nickjacobmusic/img/bio.jpeg" width="480"
+          height="640" alt="Nick Jacob, singer-songwriter" loading="lazy" />
       </div>
     </div>
   </section>
