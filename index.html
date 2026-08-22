@@ -19,11 +19,11 @@
   <link rel="canonical" href="https://nickjacobmusic.com/" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
-  <!-- Display serif for headings; body uses the system sans stack (no extra request). -->
+  <!-- Open Sans for headings; Raleway for the H1; body uses the system sans stack. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@700&display=swap"
     rel="stylesheet" />
 
   <style>
@@ -42,7 +42,7 @@
       --rust-deep: #a4491f;
       --max: 940px;
 
-      --serif: "Fraunces", Georgia, "Times New Roman", serif;
+      --serif: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
@@ -109,44 +109,50 @@
       color: #f4efe6;
       background: url("file:///Users/nicholasjacob/Repos/nickjacobmusic/img/hero.jpg") center 35% / cover no-repeat #10181e;
       overflow: hidden;
+      height: 700px;
     }
 
     .hero-inner {
-      padding: 108px 24px 84px 24px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 56px 40px;
     }
 
     .hero .eyebrow {
       color: #f0b489;
+      font-size: clamp(0.85rem, 1.6vw, 1.5rem);
     }
 
     .hero h1 {
-      font-size: clamp(2.6rem, 7vw, 9rem);
-      font-weight: 600;
-      margin: 14px 0 0;
+      font-family: "Raleway", var(--serif);
+      font-size: clamp(2.5rem, 15vw, 15rem);
+      font-weight: 700;
+      margin: 0;
+      line-height: 1;
       color: #fbf8f1;
       text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+      text-transform: uppercase;
     }
 
     .hero .sub {
       font-family: var(--serif);
-      font-style: italic;
-      font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+      font-size: clamp(1rem, 1.6vw, 1.75rem);
       color: #e7dccb;
-      margin: 14px 0 0;
-    }
-
-    .hero .loc {
-      margin-top: 20px;
-      color: #c6bcaa;
-      font-size: 0.98rem;
+      margin: 0;
     }
 
     .nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 22px;
-      margin-top: 34px;
-      font-size: 0.9rem;
+      justify-content: center;
+      gap: clamp(16px, 2vw, 40px);
+      margin: 0;
+      font-size: clamp(1.1rem, 2.6vw, 2.75rem);
       font-weight: 600;
       letter-spacing: 0.02em;
     }
@@ -284,19 +290,6 @@
     }
 
     /* Streaming */
-    #streaming {
-      background: var(--denim);
-      color: #f4efe6;
-    }
-
-    #streaming .eyebrow {
-      color: #f0b489;
-    }
-
-    #streaming .section-head h2 {
-      color: #fbf8f1;
-    }
-
     .streams {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -434,13 +427,29 @@
       color: #e7dccb;
     }
 
+    @media (max-width: 900px) {
+      header.hero {
+        height: 600px;
+      }
+    }
+
     @media (max-width: 640px) {
+      header.hero {
+        height: 520px;
+      }
+
       .hero-inner {
-        padding: 64px 24px 52px 24px;
+        padding: 40px 24px;
       }
 
       section {
         padding: 56px 0;
+      }
+    }
+
+    @media (max-width: 420px) {
+      header.hero {
+        height: 460px;
       }
     }
   </style>
@@ -450,11 +459,10 @@
 
   <!-- ============ HERO ============ -->
   <header class="hero">
-    <div class="wrap hero-inner">
+    <div class="hero-inner">
       <p class="eyebrow">Southern California singer-songwriter</p>
       <h1>Nick Jacob</h1>
       <p class="sub">Classic-rock heart. Pop sensibility. Songs built to last.</p>
-      <p class="loc">Guitar, bass &amp; harmonica — with an old Fender Strat he calls&nbsp;"Old&nbsp;Blue."</p>
       <nav class="nav" aria-label="Section navigation">
         <a href="#listen">Listen</a>
         <a href="#streaming">Streaming</a>
