@@ -107,13 +107,24 @@
     header.hero {
       position: relative;
       color: #f4efe6;
-      background: url("file:///Users/nicholasjacob/Repos/nickjacobmusic/img/hero.jpg") center 35% / cover no-repeat #10181e;
+      background: #10181e;
       overflow: hidden;
       height: 700px;
     }
 
-    .hero-inner {
+    .hero-video {
+      position: absolute;
+      inset: 0;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: fit-content;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -121,6 +132,8 @@
       align-items: center;
       text-align: center;
       padding: 56px 40px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, .8);
     }
 
     .hero .eyebrow {
@@ -135,7 +148,7 @@
       margin: 0;
       line-height: 1;
       color: #fbf8f1;
-      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.95);
       text-transform: uppercase;
     }
 
@@ -465,6 +478,10 @@
 
   <!-- ============ HERO ============ -->
   <header class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto"
+      poster="file:///Users/nicholasjacob/Repos/nickjacobmusic/img/hero.jpg">
+      <source src="file:///Users/nicholasjacob/Repos/nickjacobmusic/hero-background.mp4" type="video/mp4" />
+    </video>
     <div class="hero-inner">
       <p class="eyebrow">Southern California singer-songwriter</p>
       <h1>Nick Jacob <span>Music</span></h1>
