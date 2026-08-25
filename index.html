@@ -35,10 +35,9 @@
       --muted: #6f6153;
       --line: #e2d8c6;
       --denim: #2f4a5e;
-      /* "Old Blue" */
       --denim-deep: #223949;
       --rust: #c25a2b;
-      /* warm classic-rock accent */
+      --desert-peach: #f0b489;
       --rust-deep: #a4491f;
       --max: 940px;
 
@@ -143,7 +142,7 @@
 
     .hero h1 {
       font-family: "Raleway", var(--serif);
-      font-size: clamp(3rem, 9.3vw, 8rem);
+      font-size: clamp(3.5rem, 9.3vw, 8rem);
       font-weight: 100;
       margin: 0;
       line-height: 1;
@@ -159,7 +158,7 @@
 
     .hero .sub {
       font-family: var(--serif);
-      font-size: clamp(.8rem, 1.6vw, 1.75rem);
+      font-size: clamp(.9rem, 1.6vw, 1.75rem);
       font-style: italic;
       color: #e7dccb;
       margin: 0;
@@ -171,7 +170,7 @@
       justify-content: center;
       gap: clamp(16px, 2vw, 40px);
       margin: 0;
-      font-size: clamp(.75rem, 2.6vw, 2.75rem);
+      font-size: clamp(.9rem, 2.6vw, 2.75rem);
       font-weight: 600;
       letter-spacing: 0.02em;
     }
@@ -350,6 +349,15 @@
     }
 
     /* Bio */
+    #bio {
+      background: var(--denim-deep);
+      color: #b9c6cf;
+    }
+
+    #bio .eyebrow {
+      color: var(--desert-peach)
+    }
+
     .bio-layout {
       display: flex;
       gap: 44px;
@@ -372,12 +380,12 @@
       line-height: 0.8;
       float: left;
       padding: 6px 10px 0 0;
-      color: var(--rust);
+      color: var(--desert-peach)
     }
 
     .bio-photo {
-      flex: 0 0 300px;
-      width: 300px;
+      flex: 0 0 360px;
+      width: 360px;
       height: auto;
       display: block;
       border-radius: 14px;
@@ -395,6 +403,7 @@
         flex-basis: auto;
         width: 100%;
         max-width: 340px;
+        margin: 0 auto;
       }
     }
 
@@ -459,6 +468,7 @@
 
       .hero-inner {
         padding: 40px 10px;
+        width: 100%;
       }
 
       section {
@@ -485,7 +495,7 @@
     <div class="hero-inner">
       <p class="eyebrow">Southern California singer-songwriter</p>
       <h1>Nick Jacob <span>Music</span></h1>
-      <p class="sub">Classic-rock heart. Pop sensibility. Songs built to last.</p>
+      <p class="sub">Timeless Americana. Pop sensibility. Songs built to last.</p>
       <nav class="nav" aria-label="Section navigation">
         <a href="#listen">Listen</a>
         <a href="#streaming">Streaming</a>
@@ -579,12 +589,20 @@
       </div>
       <div class="bio-layout">
         <div class="bio">
-          <p>Nick Jacob is a singer, songwriter and musician based in Southern California. His primary instrument is a
-            Fender Stratocaster he calls &ldquo;Old Blue&rdquo;, but he also plays bass guitar and harmonica on some of
-            his recorded tracks.</p>
-          <p>Nick&rsquo;s songwriting style contains a strong pop sensibility that employs catchy melodies and memorable
-            hooks. He considers himself to be a &ldquo;1970s classic rock guy at heart&rdquo;, but his music draws
-            inspiration from multiple decades including the 1950s and covers various genres from rock to folk.</p>
+          <p>Nick Jacob is a singer, songwriter and musician based in Southern California. Over the past 35 years, Nick
+            has
+            written hundreds of songs spanning various genres from rock to folk. He co-wrote his first song,
+            “Transaction”, a Run DMC style rap number with his friend Larry Bagby when they were both in fifth grade.
+            The
+            duo continued writing folk-inspired rock songs together in high school with catchy melodies and harmonies
+            reminiscent of Crosby, Stills and Nash and The Eagles. In their early twenties, they formed a
+            short-lived ’50s style rock ’n’ roll band called The Enchantments where Nick wrote some of the songs that
+            would later appear on his 2018 debut solo album, <em>Midnight Ride</em>.</p>
+          <p>Nick's songwriting style contains a strong pop sensibility that employs catchy melodies, memorable hooks
+            and
+            thoughtful lyrics. While he personally enjoys music from almost every genre, many of his songs draw
+            inspiration from the American music scenes of the 1950s, 1960s and 1970s. Currently, Nick is recording a new
+            album, <em>Ebb &amp; Flow</em>, that will be published in early 2027.</p>
         </div>
         <img class="bio-photo" src="file:///Users/nicholasjacob/Repos/nickjacobmusic/img/bio.jpeg" width="480"
           height="640" alt="Nick Jacob, singer-songwriter" loading="lazy" />
